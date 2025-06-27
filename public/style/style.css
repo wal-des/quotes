@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap");
+
+:root {
+  /* colors */
+  --clr-app-bg: #f2f0fa;
+  --clr-card-bg: #ffffff;
+  --clr-bg-elevation-2: #f7f5fc;
+  --clr-tag-bg: #f2f0fa;
+  --clr-accent: #5d34ff;
+  --clr-modal-rgb: 10, 4, 45;
+  --clr-border: #b3a0ff;
+  --clr-border-focus: #4721dd;
+  --clr-border-focus-rgb: 71, 33, 221;
+  --clr-border-error: #dd213d;
+
+  /*text colors*/
+  --clr-text-primary: #190958;
+  --clr-text-secondary: #5f5a73;
+  --clr-text-accent: #4721dd;
+  --clr-text-inverse: #ffffff;
+  --clr-text-error: #aa0b23;
+
+  /*border radius*/
+  --btn-corner-radius: 100px;
+  --card-corner-radius: 8px;
+  --tag-corner-radius: 2px;
+  --input-corner-radius: 4px;
+
+  /*fonts*/
+  --ff-header: "Roboto Slab", serif;
+  --ff-body: "Lora", sans-serif;
+
+  --p-max-width: 55ch;
+
+  /*shadows*/
+  --card-shadow: 0px 3px 2px 0px rgba(93, 52, 255, 0.1),
+    0px 2px 10px 1px rgba(128, 0, 255, 0.14);
+  --btn-shadow: 0px 3px 2px 0px rgba(93, 52, 255, 0.1),
+    0px 2px 10px 1px rgba(128, 0, 255, 0.14);
+  --nav-bar-shadow: 0px 0px 10px 0px rgba(128, 0, 255, 0.14);
+  --modal-alpha: 0.3;
+  --focus-border-shadow: 0px 0px 0px 1px rgb(255, 255, 255),
+    0px 0px 0px 4px rgb(var(--clr-border-focus-rgb));
+
+  /*font size*/
+  --font-size-xs: clamp(0.7901rem, 0.7558rem + 0.1718vi, 0.8889rem);
+  --font-size-s: clamp(0.8889rem, 0.8502rem + 0.1932vi, 1rem);
+  --font-size-m: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem);
+  --font-size-l: clamp(1.2rem, 1.0641rem + 0.6796vi, 1.5908rem);
+  --font-size-xl: clamp(1.44rem, 1.1585rem + 1.4075vi, 2.2493rem);
+  --font-size-2xl: clamp(1.728rem, 1.2228rem + 2.5262vi, 3.1805rem);
+
+  /*Space*/
+  --space-3xs: clamp(0.25rem, 0.2283rem + 0.1087vi, 0.3125rem);
+  --space-2xs: clamp(0.5rem, 0.4783rem + 0.1087vi, 0.5625rem);
+  --space-xs: clamp(0.75rem, 0.7065rem + 0.2174vi, 0.875rem);
+  --space-s: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem);
+  --space-m: clamp(1.5rem, 1.4348rem + 0.3261vi, 1.6875rem);
+  --space-l: clamp(2rem, 1.913rem + 0.4348vi, 2.25rem);
+  --space-xl: clamp(3rem, 2.8696rem + 0.6522vi, 3.375rem);
+  --space-2xl: clamp(4rem, 3.8261rem + 0.8696vi, 4.5rem);
+  --space-3xl: clamp(6rem, 5.7391rem + 1.3043vi, 6.75rem);
+
+  /*negative spaces*/
+  --space-l-neg: clamp(-2rem, calc(-1.88rem - 0.63vw), -2.5rem);
+  --space-xl-neg: clamp(-3rem, calc(-2.81rem - 0.94vw), -3.75rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, 0.1413rem + 0.5435vi, 0.5625rem);
+  --space-2xs-xs: clamp(0.5rem, 0.3696rem + 0.6522vi, 0.875rem);
+  --space-xs-s: clamp(0.75rem, 0.6196rem + 0.6522vi, 1.125rem);
+  --space-s-m: clamp(1rem, 0.7609rem + 1.1957vi, 1.6875rem);
+  --space-m-l: clamp(1.5rem, 1.2391rem + 1.3043vi, 2.25rem);
+  --space-l-xl: clamp(2rem, 1.5217rem + 2.3913vi, 3.375rem);
+  --space-xl-2xl: clamp(3rem, 2.4783rem + 2.6087vi, 4.5rem);
+  --space-2xl-3xl: clamp(4rem, 3.0435rem + 4.7826vi, 6.75rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(1rem, 0.5652rem + 2.1739vi, 2.25rem);
+
+  /*used for links, padding is larger on mobile than on desktop */
+  --space-xs-3xs: clamp(0.3125rem, 0.9022rem + -0.7609vi, 0.75rem);
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html {
+  background-color: var(--clr-app-bg);
+  font-family: var(--ff-body);
+  color: var(--clr-text-primary);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin: 0;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+section {
+  padding: var(--space-s);
+}
+
+/*Typography*/
+
+h1,
+h2,
+h3,
+h4,
+p,
+legend,
+label {
+  margin: 0;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+h1 {
+  font-family: var(--ff-header);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: var(--space-l);
+  color: var(--clr-text-accent);
+}
+
+h2 {
+  font-family: var(--ff-header);
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.label {
+  font-family: var(--ff-header);
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  line-height: 120%;
+}
+
+label,
+.label-small,
+legend,
+.error-message {
+  font-family: var(--ff-header);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  line-height: 120%;
+}
+
+p,
+.quote-text {
+  font-family: var(--ff-body);
+  font-size: var(--font-size-m);
+  line-height: 160%;
+}
+
+p:has(+ p),
+h2:has(+ p) {
+  margin-right: var(--space-3xs);
+}
+
+button {
+  font-family: var(--ff-header);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  line-height: 120%;
+  min-width: 100px;
+  border-radius: var(--btn-corner-radius);
+  cursor: pointer;
+  opacity: 1;
+  padding: var(--space-2xs) var(--space-m);
+  border: 1px solid var(--clr-accent);
+}
+
+.btn-primary,
+.btn-cta {
+  background-color: var(--clr-accent);
+  color: var(--clr-text-inverse);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-cta:hover,
+.btn-cta:focus {
+  opacity: 0.85;
+  box-shadow: var(--focus-border-shadow);
+}
+
+.btn-secondary {
+  background-color: var(--clr-white);
+  border: 1px solid var(--clr-accent);
+  color: var(--clr-text-accent);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--clr-bg-elevation-2);
+  box-shadow: var(--focus-border-shadow);
+  opacity: 0.85;
+}
+
+.btn-secondary:active {
+  background-color: var(--clr-accent);
+  color: var(--clr-text-inverse);
+}
+
+/* Dölj de faktiska radioknapparna */
+input[type="radio"] {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.filterButtonContainer {
+  margin-bottom: var(--space-s);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--space-2xs);
+  border: none;
+}
+
+.filterButton {
+  font-family: var(--ff-header);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  line-height: 120%;
+  min-width: 48px;
+  border-radius: var(--btn-corner-radius);
+  cursor: pointer;
+  opacity: 1;
+  padding: var(--space-2xs) var(--space-s);
+  background-color: var(--clr-white);
+  border: 1px solid var(--clr-accent);
+  color: var(--clr-text-accent);
+}
+
+.selected,
+input[type="radio"]:checked + .filterButton {
+  background-color: var(--clr-accent);
+  color: var(--clr-text-inverse);
+}
+
+.filterButton:active {
+  background-color: var(--clr-accent);
+  color: var(--clr-text-inverse);
+}
+
+.quote-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: pre-line;
+}
+
+.card .quote-text {
+  -webkit-line-clamp: 4;
+}
+
+.quote-source {
+  color: var(--clr-text-accent);
+}
+
+.additionalNote {
+  color: var(--clr-text-accent);
+  margin-top: var(--space-3xs);
+}
+
+.quote-tag {
+  padding: var(--space-3xs) var(--space-2xs);
+  background-color: var(--clr-tag-bg);
+  border-radius: var(--tag-corner-radius);
+  height: fit-content;
+  margin-left: var(--space-xs);
+}
+
+.quote-type {
+  color: var(--clr-text-primary);
+}
+
+/* Cards content and layout */
+.cardList {
+  columns: 6 300px;
+  column-gap: var(--space-s);
+}
+
+.card {
+  background-color: var(--clr-card-bg);
+  border-radius: var(--card-corner-radius);
+  box-shadow: var(--card-shadow);
+  height: fit-content;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 0 var(--space-s) 0;
+  padding: var(--space-s);
+  outline: 0px;
+  transition: outline 0.2s ease-in;
+  display: block;
+}
+
+.card:hover,
+.card:focus {
+  outline: 2px solid var(--clr-accent);
+}
+
+.quote-details {
+  margin-top: var(--space-2xs);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.hidden {
+  display: none;
+}
+
+/* The popup modal - hidden by default */
+.modal {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0 0 0 / 40%);
+  background-color: rgba(var(--clr-modal-rgb), var(--modal-alpha));
+  backdrop-filter: blur(12px);
+  background-size: cover;
+
+  display: none;
+  opacity: 0;
+  /* translate: 0 25vh; */
+  transition-property: overlay display opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+/* This class is added to the modal when a card is clicked */
+.modalOpen {
+  display: block;
+  opacity: 1;
+  /* translate: 0 0; */
+
+  @starting-style {
+    opacity: 0;
+    /* translate: 0 -25vh; */
+  }
+}
+
+/* This is the box that holds the quote in the modal */
+.modal-container {
+  width: 90%;
+  max-width: 650px;
+  max-height: 80vh;
+  background-color: var(--clr-card-bg);
+  border-radius: var(--card-corner-radius);
+  box-shadow: var(--card-shadow);
+  padding: var(--space-m);
+  padding-bottom: 0;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  overflow: scroll;
+}
+
+.button-container {
+  background-color: var(--clr-card-bg);
+  padding: var(--space-m);
+  padding-top: var(--space-s);
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  position: sticky;
+  bottom: 0;
+  align-self: flex-end;
+}
+
+/*** Form ****/
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 650px);
+}
+
+.form-button-container {
+  padding: var(--space-m) 0;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-s);
+  margin-top: 1rem;
+  position: sticky;
+  bottom: 0;
+  align-self: center;
+  width: min(100%, 500px);
+}
+
+.form-button {
+  width: 100%;
+}
+
+label:not(:first-child) {
+  margin-top: var(--space-s);
+}
+
+textarea,
+input,
+select {
+  padding: var(--space-2xs) var(--space-2xs);
+  margin-top: var(--space-2xs);
+  font-family: var(--ff-body);
+  font-size: var(--font-size-m);
+  line-height: 160%;
+  color: var(--clr-text-primary);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--input-corner-radius);
+
+  &:hover {
+    border-color: var(--clr-border-focus);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: var(--focus-border-shadow);
+  }
+}
+
+.error-message {
+  margin-top: var(--space-2xs);
+  color: var(--clr-text-error);
+  font-size: 0.9rem;
+  margin-left: 5px;
+  display: none; /* Felmeddelandet visas endast vid validering */
+}
+
+input.error,
+textarea.error {
+  border: 2px solid var(--clr-border-error); /* Markerar ogiltiga fält med röd ram */
+}
+
+.btn-cta {
+  position: fixed;
+  bottom: var(--space-m);
+  right: var(--space-m);
+  box-shadow: var(--btn-shadow);
+}
