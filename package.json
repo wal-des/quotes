@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "wal-des",
   "license": "ISC",
   "description": "",
   "dependencies": {
@@ -15,5 +15,9 @@
     "dotenv": "^16.6.0",
     "ejs": "^3.1.10",
     "express": "^4.21.2"
-  }
+  },
+
+  "engines": {
+  "node": "20.x"
+}
 }
