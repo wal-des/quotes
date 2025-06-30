@@ -4,7 +4,6 @@ const path = require("path");
 const app = express();
 const indexRouter = require("./routes/index");
 const bodyParser = require("body-parser");
-const x = "dummy";
 
 // Middleware
 app.set("view engine", "ejs");
