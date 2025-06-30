@@ -1,5 +1,5 @@
 {
-  "name": "4.5-c-airtable",
+  "name": "quotes-app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
