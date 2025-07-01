@@ -5,9 +5,7 @@
   "homepage": "https://wal-des.github.io/quotes/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d public"
   },
   "keywords": [],
   "author": "wal-des",
