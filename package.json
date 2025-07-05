@@ -1,12 +1,14 @@
 {
-  "name": "4.5-c-airtable",
+  "name": "quotes-app",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://wal-des.github.io/quotes/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d public"
   },
   "keywords": [],
-  "author": "",
+  "author": "wal-des",
   "license": "ISC",
   "description": "",
   "dependencies": {
@@ -15,5 +17,11 @@
     "dotenv": "^16.6.0",
     "ejs": "^3.1.10",
     "express": "^4.21.2"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
