@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -18,7 +18,7 @@ app.use("/", indexRouter);
 app.use("/add", indexRouter);
 
 // Starta servern
-const port = 3000;
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+// const port = 3000;
+// app.listen(port, () => {
+//   console.log(`Server is running on http://localhost:${port}`);
+// });
